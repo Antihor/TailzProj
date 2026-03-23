@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f6f4f1;
+  color: #02060a;
+  line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -12,7 +22,8 @@ p:last-child {
   margin-bottom: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -21,9 +32,11 @@ ul {
 a {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
+  display: block;
   cursor: pointer;
 }
 
@@ -31,4 +44,15 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.container {
+  max-width: 1440px;
+  padding-left: 64px;
+  padding-right: 64px;
+  margin-left: auto;
+  margin-right: auto;
 }
