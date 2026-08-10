@@ -1,0 +1,140 @@
+.d-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #c1b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms linear;
+}
+
+.d-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+
+  .modal-container {
+    background-color: #f6f4f1;
+    position: relative;
+    max-width: 335px;
+    padding: 64px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .d-modal-halfL,
+  .d-modal-halfR {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .d-modal-img {
+    margin-bottom: 32px;
+  }
+  .modal-pet-spec {
+    font-size: 12px;
+  }
+  .modal-pet-name {
+    font-size: 32px;
+  }
+  .modal-pet-wrap {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .modal-pet-age,
+  .modal-pet-sex {
+    font-size: 12px;
+  }
+  .modal-pet-txt-sub {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .modal-pet-sub-txt {
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .d-modal-submit-btn {
+    border: 1px solid #88765c;
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 295px;
+    height: 48px;
+    background-color: #88765c;
+    color: #ffffff;
+    font-size: 14px;
+
+    transition:
+      background-color 300ms,
+      color 300ms;
+  }
+  .d-modal-submit-btn:hover,
+  .d-modal-submit-btn:focus {
+    background-color: #eee9e3;
+    color: #02060a;
+  }
+
+  @media screen and (min-width: 768px) {
+    .modal-container {
+      max-width: 704px;
+      max-height: 650px;
+      margin-top: 64px;
+      padding: 64px 32px;
+      flex-direction: row;
+      gap: 32px;
+    }
+    .d-modal-halfL {
+      flex-basis: calc((100% - 32px) / 2);
+      padding-top: 64px;
+      padding-bottom: 64px;
+      padding-left: 32px;
+    }
+    .d-modal-halfR {
+      flex-basis: calc((100% - 32px) / 2);
+      padding-top: 64px;
+      padding-bottom: 64px;
+      padding-right: 32px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .modal-container {
+      max-width: 1312px;
+      max-height: 650px;
+      padding: 64px;
+      margin-top: 64px;
+    }
+    .d-modal-halfL {
+      padding: 64px 0 64px 64px;
+    }
+    .d-modal-halfR {
+      padding: 64px 64px 64px 0;
+    }
+    .modal-pet-spec,
+    .modal-pet-age,
+    .modal-pet-sex {
+      font-size: 14px;
+    }
+    .modal-pet-name {
+      font-size: 40px;
+    }
+    .modal-pet-txt-sub,
+    .modal-pet-sub-txt {
+      font-size: 16px;
+    }
+    .d-modal-submit-btn {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}

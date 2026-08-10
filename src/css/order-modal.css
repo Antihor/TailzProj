@@ -1,0 +1,143 @@
+.o-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+  background-color: #c1b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms linear;
+}
+.o-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+
+  .o-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    border-radius: 8px;
+    padding: 64px 20px;
+    max-width: 335px;
+    background-color: #f6f4f1;
+  }
+  .o-form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .form-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .o-form-title {
+    width: 295px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #02060a;
+  }
+  .o-form-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .o-form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .form-input {
+    width: 294px;
+    height: 36px;
+    border-radius: 12px;
+    border-color: transparent;
+    background-color: #02060a0d;
+  }
+  .form-input::placeholder,
+  .form-txt::placeholder {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #02060a99;
+  }
+  .form-txt {
+    width: 295px;
+    height: 180px;
+    padding: 12px;
+    border-radius: 12px;
+    border-color: transparent;
+    background-color: #02060a0d;
+    resize: none;
+    overflow: hidden;
+  }
+  .form-submit-btn {
+    border: 1px solid #88765c;
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 295px;
+    height: 46px;
+    background-color: #88765c;
+    color: #ffffff;
+    font-size: 14px;
+
+    transition: all 300ms linear;
+  }
+  .form-submit-btn:hover,
+  .form-submit-btn:focus {
+    background-color: #c3b49d;
+    color: #02060a;
+    border: 1px solid #88765c;
+  }
+
+  @media screen and (min-width: 768px) {
+    .o-modal {
+      max-width: 704px;
+      align-items: center;
+      padding: 64px 32px;
+    }
+    .o-form-title {
+      width: 640px;
+    }
+    .form-input {
+      width: 640px;
+    }
+    .form-txt {
+      width: 640px;
+      height: 208px;
+    }
+    .form-submit-btn {
+      width: 240px;
+      height: 46px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .o-modal {
+      max-width: 704px;
+      padding: 64px;
+    }
+    .o-form-title {
+      width: 640px;
+      font-size: 48px;
+    }
+    .o-form-content {
+      font-size: 16px;
+    }
+    .form-submit-btn {
+      font-size: 16px;
+      height: 48px;
+    }
+  }
+}
