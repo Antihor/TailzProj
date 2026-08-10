@@ -23,9 +23,10 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/TailzProj/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/TailzProj/assets/vendor-BD2DnxTY.js">
-    <link rel="stylesheet" crossorigin href="/TailzProj/assets/vendor-CtFclebB.css">
-    <link rel="stylesheet" crossorigin href="/TailzProj/assets/index-kBVtFFVs.css">
+    <link rel="modulepreload" crossorigin href="/TailzProj/assets/rolldown-runtime-Bh1tDfsg.js">
+    <link rel="modulepreload" crossorigin href="/TailzProj/assets/vendor-CaT_Cwws.js">
+    <link rel="stylesheet" crossorigin href="/TailzProj/assets/vendor-C0P3l20Q.css">
+    <link rel="stylesheet" crossorigin href="/TailzProj/assets/index-DyDk60kN.css">
   </head>
   <body>
     <head></head>
@@ -34,7 +35,7 @@
   <div class="header-container container">
     <nav class="header-nav">
       <a href="#hero" class="logo">
-        <svg width="160" height="62">
+        <svg width="160" height="68">
           <use href="../img/symbol-defs.svg#icon-Company-Logo"></use>
         </svg>
       </a>
@@ -53,7 +54,12 @@
         </li>
       </ul>
     </nav>
-    <a href="" class="nav-btn">Взяти друга</a>
+    <a href="#pets" class="nav-btn">Взяти друга</a>
+    <button type="button" class="header-burg-btn">
+      <svg class="header-burg-icon" width="24" height="24">
+        <use href="../img/symbol-defs.svg#icon-menu"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
@@ -77,7 +83,7 @@
     <h2 class="pets-section-title">Наші хвостики</h2>
     <p class="pets-sub">Вони дуже чекають на знайомство з вами</p>
     <ul class="pets-filters">
-      <li class="pets-filter-item">Всі</li>
+      <li class="pets-filter-item is-active">Всі</li>
       <li class="pets-filter-item">Собаки</li>
       <li class="pets-filter-item">Коти</li>
       <li class="pets-filter-item">Кролики</li>
@@ -145,6 +151,7 @@
           <div class="pet-filter-wrap">
             <p class="pet-filter">Собаки</p>
             <p class="pet-filter">Тварини з особливими потребами</p>
+            <p class="pet-filter">Терміново шукають дім</p>
           </div>
           <div class="pet-wrap">
             <p class="pet-age">6місяців</p>
@@ -213,6 +220,7 @@
           <h3 class="pet-name">Мурчик</h3>
           <div class="pet-filter-wrap">
             <p class="pet-filter">Коти</p>
+            <p class="pet-filter">Терміново шукають дім</p>
           </div>
           <div class="pet-wrap">
             <p class="pet-age">8 років</p>
@@ -259,6 +267,7 @@
           <h3 class="pet-name">Перлинка</h3>
           <div class="pet-filter-wrap">
             <p class="pet-filter">Коти</p>
+            <p class="pet-filter">Тварини з особливими потребами</p>
           </div>
           <div class="pet-wrap">
             <p class="pet-age">3 роки</p>
@@ -306,64 +315,116 @@
     <div class="about-gallery swiper my-swiper">
       <ul class="about-list swiper-wrapper">
         <li class="about-item swiper-slide">
-          <img class="about-img" src="../img/desk/about/img1.jpg" alt="" />
-          <p class="about-text"></p>
+          <picture>
+            <source
+              srcset="../img/desk/about/img1.jpg"
+              media="(min-width: 1440px)" />
+            <source
+              srcset="../img/mob/about-mob/slide 01.jpg"
+              media="(max-width: 1439px)" />
+            <img
+              class="about-img"
+              src="../img/mob/about-mob/slide 01.jpg"
+              alt="Перший слайд"
+          /></picture>
         </li>
         <li class="about-item swiper-slide">
-          <img class="about-img" src="../img/desk/about/img2.jpg" alt="" />
-          <p class="about-text"></p>
+          <picture>
+            <source
+              srcset="../img/desk/about/img2.jpg"
+              media="(min-width: 1440px)" />
+            <source
+              srcset="../img/mob/about-mob/slide 02.jpg"
+              media="(max-width: 1439px)" />
+            <img
+              class="about-img"
+              src="../img/mob/about-mob/slide 02.jpg"
+              alt="Другий слайд"
+          /></picture>
         </li>
         <li class="about-item swiper-slide">
-          <img class="about-img" src="../img/desk/about/img3.jpg" alt="" />
-          <p class="about-text"></p>
+          <picture>
+            <source
+              srcset="../img/desk/about/img3.jpg"
+              media="(min-width: 1440px)" />
+            <source
+              srcset="../img/mob/about-mob/slide 03.jpg"
+              media="(max-width: 1439px)" />
+            <img
+              class="about-img"
+              src="../img/mob/about-mob/slide 03.jpg"
+              alt="Третій слайд"
+          /></picture>
         </li>
         <li class="about-item swiper-slide">
-          <img class="about-img" src="../img/desk/about/img4.jpg" alt="" />
-          <p class="about-text"></p>
+          <picture>
+            <source
+              srcset="../img/desk/about/img4.jpg"
+              media="(min-width: 1440px)" />
+            <source
+              srcset="../img/mob/about-mob/slide 04.jpg"
+              media="(max-width: 1439px)" />
+            <img
+              class="about-img"
+              src="../img/mob/about-mob/slide 04.jpg"
+              alt="Четвертий слайд"
+          /></picture>
         </li>
         <li class="about-item swiper-slide">
-          <img class="about-img" src="../img/desk/about/img5.jpg" alt="" />
-          <p class="about-text"></p>
+          <picture>
+            <source
+              srcset="../img/desk/about/img5.jpg"
+              media="(min-width: 1440px)" />
+            <source
+              srcset="../img/mob/about-mob/slide 05.jpg"
+              media="(max-width: 1439px)" />
+            <img
+              class="about-img"
+              src="../img/mob/about-mob/slide 05.jpg"
+              alt="П'ятий слайд"
+          /></picture>
         </li>
       </ul>
-      <div class="swiper-nav-buttons">
-        <div class="swiper-button-prev">
-          <svg width="48" height="48">
-            <use href="../img/symbol-defs.svg#icon-arrow_back"></use>
-          </svg>
+      <div class="swiper-controls">
+        <div class="swiper-pagination">
+          <span>
+            <svg>
+              <use href="../img/icons/dot.svg"></use>
+            </svg>
+          </span>
+          <span>
+            <svg>
+              <use href="../img/icons/dot.svg"></use>
+            </svg>
+          </span>
+          <span>
+            <svg>
+              <use href="../img/icons/dot.svg"></use>
+            </svg>
+          </span>
+          <span>
+            <svg>
+              <use href="../img/icons/dot.svg"></use>
+            </svg>
+          </span>
+          <span>
+            <svg>
+              <use href="../img/icons/dot.svg"></use>
+            </svg>
+          </span>
         </div>
-        <div class="swiper-button-next">
-          <svg width="48" height="48">
-            <use href="../img/symbol-defs.svg#icon-arrow_forward"></use>
-          </svg>
+        <div class="swiper-nav-buttons">
+          <button class="swiper-button-prev" aria-label="Попередній слайд">
+            <svg width="24" height="24">
+              <use href="../img/symbol-defs.svg#icon-arrow_back"></use>
+            </svg>
+          </button>
+          <button class="swiper-button-next" aria-label="Наступний слайд">
+            <svg width="24" height="24">
+              <use href="../img/symbol-defs.svg#icon-arrow_forward"></use>
+            </svg>
+          </button>
         </div>
-      </div>
-      <div class="swiper-pagination">
-        <span>
-          <svg>
-            <use href="../img/icons/dot.svg"></use>
-          </svg>
-        </span>
-        <span>
-          <svg>
-            <use href="../img/icons/dot.svg"></use>
-          </svg>
-        </span>
-        <span>
-          <svg>
-            <use href="../img/icons/dot.svg"></use>
-          </svg>
-        </span>
-        <span>
-          <svg>
-            <use href="../img/icons/dot.svg"></use>
-          </svg>
-        </span>
-        <span>
-          <svg>
-            <use href="../img/icons/dot.svg"></use>
-          </svg>
-        </span>
       </div>
     </div>
   </div>
@@ -379,7 +440,7 @@
             Я мрію про пухнастика! Що мені потрібно зробити, щоб забрати
             хвостика додому?
           </h3>
-          <svg class="faq-icon">
+          <svg class="faq-icon" width="24" height="24">
             <use href="../img/symbol-defs.svg#icon-add"></use>
           </svg>
         </div>
@@ -420,7 +481,7 @@
           <h3 class="faq-card-head">
             Як мені найкраще підготувати свій дім та родину до появи хвостика?
           </h3>
-          <svg class="faq-icon">
+          <svg class="faq-icon" width="24" height="24">
             <use href="../img/symbol-defs.svg#icon-add"></use>
           </svg>
         </div>
@@ -458,7 +519,7 @@
             Чи можу я бути впевненим, що тваринка здорова? Розкажіть про
             щеплення.
           </h3>
-          <svg class="faq-icon">
+          <svg class="faq-icon" width="24" height="24">
             <use href="../img/symbol-defs.svg#icon-add"></use>
           </svg>
         </div>
@@ -493,7 +554,7 @@
             Я дуже хочу допомогти, але поки не готовий до адопції. Чим я можу
             підтримати «Хатинку лапок»?
           </h3>
-          <svg class="faq-icon">
+          <svg class="faq-icon" width="24" height="24">
             <use href="../img/symbol-defs.svg#icon-add"></use>
           </svg>
         </div>
@@ -531,7 +592,7 @@
             Мені сподобалась одна з ваших тваринок на сайті. Чи можу я приїхати,
             щоб познайомитися з нею особисто?
           </h3>
-          <svg class="faq-icon">
+          <svg class="faq-icon" width="24" height="24">
             <use href="../img/symbol-defs.svg#icon-add"></use>
           </svg>
         </div>
@@ -559,33 +620,46 @@
     <h3 class="success-sub">
       Ці хвостики вже знайшли свій дім. Ваш майбутній друг теж чекає на вас
     </h3>
-    <ul class="success-list">
-      <li class="success-list-card">
-        <div class="star-wrap"></div>
-        <p class="success-txt">
-          Ми довго вагалися, чи готові до собаки, але коли побачили на сайті
-          Хатинки фото Арчі, зрозуміли — це наш. Тепер ми не уявляємо ранків без
-          його веселого гавкоту та вечорів без спільних прогулянок. Він приніс у
-          наш дім стільки сміху та любові! Дякуємо „Хатинці лапок“ за нашого
-          найкращого друга.
-        </p>
-        <h4 class="success-name">Марина та Сергій</h4>
-      </li>
-      <li class="success-list-card">
-        <div class="star-wrap"></div>
-        <p class="success-txt">
-          Я завжди хотіла взяти котика, але боялася, що доросла тварина не зможе
-          звикнути. Волонтери переконали мене дати шанс Алісі, і це було
-          найкраще рішення! Її муркотіння — найкращий антистрес після робочого
-          дня. Не бійтеся брати дорослих хвостиків, вони віддячать вам безмежною
-          любов'ю!
-        </p>
-        <h4 class="success-name">Олена</h4>
-      </li>
-    </ul>
+    <div class="swiper">
+      <ul class="success-list swiper-wrapper">
+        <li class="success-list-card swiper-slide">
+          <div class="star-wrap"></div>
+          <p class="success-txt">
+            Ми довго вагалися, чи готові до собаки, але коли побачили на сайті
+            Хатинки фото Арчі, зрозуміли — це наш. Тепер ми не уявляємо ранків
+            без його веселого гавкоту та вечорів без спільних прогулянок. Він
+            приніс у наш дім стільки сміху та любові! Дякуємо „Хатинці лапок“ за
+            нашого найкращого друга.
+          </p>
+          <h4 class="success-name">Марина та Сергій</h4>
+        </li>
+        <li class="success-list-card swiper-slide">
+          <div class="star-wrap"></div>
+          <p class="success-txt">
+            Я завжди хотіла взяти котика, але боялася, що доросла тварина не
+            зможе звикнути. Волонтери переконали мене дати шанс Алісі, і це було
+            найкраще рішення! Її муркотіння — найкращий антистрес після робочого
+            дня. Не бійтеся брати дорослих хвостиків, вони віддячать вам
+            безмежною любов'ю!
+          </p>
+          <h4 class="success-name">Олена</h4>
+        </li>
+      </ul>
+    </div>
     <div class="success-controls">
-      <svg></svg>
-      <svg></svg>
+      <div class="success-pag swiper-pagination"></div>
+      <div class="success-buttons">
+        <button class="success-btn-prev swiper-button-prev">
+          <svg width="24" height="24">
+            <use href="../img/symbol-defs.svg#icon-arrow_back"></use>
+          </svg>
+        </button>
+        <button class="success-btn-next swiper-button-next">
+          <svg width="24" height="24">
+            <use href="../img/symbol-defs.svg#icon-arrow_forward"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -633,25 +707,25 @@
   </div>
 </footer>
 
-      <div class="backdrop">
-  <div class="d-modal">
+      <div class="d-modal">
+  <div class="modal-container container">
     <svg class="form-close-btn" width="32" height="32">
       <use href="../img/symbol-defs.svg#icon-close"></use>
     </svg>
-    <div class="d-modal-half">
+    <div class="d-modal-halfL">
       <img class="d-modal-img" src="../img/desk/pets/card-1.jpg" alt="" />
     </div>
-    <div class="d-modal-half">
-      <p class="pet-spec">Собака</p>
-      <h3 class="pet-name">Джек</h3>
-      <div class="pet-wrap">
-        <p class="pet-age">4 роки</p>
-        <p class="pet-sex">Хлопчик</p>
+    <div class="d-modal-halfR">
+      <p class="modal-pet-spec">Собака</p>
+      <h3 class="modal-pet-name">Джек</h3>
+      <div class="modal-pet-wrap">
+        <p class="modal-pet-age">4 роки</p>
+        <p class="modal-pet-sex">Хлопчик</p>
       </div>
-      <ul class="pet-txt">
+      <ul class="modal-pet-txt">
         <li>
-          <h4 class="pet-txt-sub">Опис:</h4>
-          <p class="pet-sub-txt">
+          <h4 class="modal-pet-txt-sub">Опис:</h4>
+          <p class="modal-pet-sub-txt">
             Цей пухнастик має унікальну історію та чекає на люблячу родину. Його
             характер — спокійний та дружелюбний. Повністю здоровий,
             вакцинований, привчений до лотка. Ідеально ладнає з дітьми та іншими
@@ -659,34 +733,34 @@
           </p>
         </li>
         <li>
-          <h4 class="pet-txt-sub">Здоров'я:</h4>
-          <p class="pet-sub-txt">
+          <h4 class="modal-pet-txt-sub">Здоров'я:</h4>
+          <p class="modal-pet-sub-txt">
             Здоровий, кастрований, вакцинований. Потребує регулярного
             вичісування шерсті.
           </p>
         </li>
         <li>
-          <h4 class="pet-txt-sub">Поведінка:</h4>
-          <p class="pet-sub-txt">
+          <h4 class="modal-pet-txt-sub">Поведінка:</h4>
+          <p class="modal-pet-sub-txt">
             Бажано бути єдиною твариною в сім'ї. Не любить конкуренції за увагу.
           </p>
         </li>
 
-        <button class="pets-card-btn" type="button">Дізнатись більше</button>
+        <button class="d-modal-submit-btn" type="button">Взяти додому</button>
       </ul>
     </div>
   </div>
 </div>
 
-      <div class="backdrop">
-  <div class="modal">
-    <form class="ad-form">
+      <div class="o-backdrop">
+  <div class="o-modal">
+    <form class="o-form">
       <svg class="form-close-btn" width="32" height="32">
         <use href="../img/symbol-defs.svg#icon-close"></use>
       </svg>
-      <h2 class="form-title">Залишіть заявку на знайомство</h2>
-      <div class="form-content">
-        <label class="form-label"
+      <h2 class="o-form-title">Залишіть заявку на знайомство</h2>
+      <div class="o-form-content">
+        <label class="o-form-label"
           >Ім’я*<input
             class="form-input"
             type="text"
@@ -695,7 +769,7 @@
             id="name-input"
             required
         /></label>
-        <label class="form-label"
+        <label class="o-form-label"
           >Телефон*<input
             class="form-input"
             type="tel"
@@ -704,7 +778,7 @@
             id="tel-input"
             required
         /></label>
-        <label class="form-label"
+        <label class="o-form-label"
           >Коментар
           <textarea
             class="form-txt"
@@ -712,10 +786,43 @@
             placeholder="Напишіть ваш коментар"
           ></textarea>
         </label>
-        <button class="form-btn" type="submit">Надіслати</button>
+        <button class="form-submit-btn" type="submit">Надіслати</button>
       </div>
     </form>
   </div>
+</div>
+
+      <div class="nav-modal">
+  <nav class="header-nav">
+    <div class="nav-head">
+      <a href="#hero" class="logo">
+        <svg width="160" height="68">
+          <use href="../img/symbol-defs.svg#icon-Company-Logo"></use>
+        </svg>
+      </a>
+
+      <button class="modal-close-btn">
+        <svg width="24" height="24">
+          <use href="../img/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a class="nav-link" href="#pets">Знайди друга</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="#about">Про нас</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="#faq">Часті запитання</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="#success">Історії успіху</a>
+      </li>
+    </ul>
+    <a href="#pets" class="nav-btn">Взяти друга</a>
+  </nav>
 </div>
 
     </main>
